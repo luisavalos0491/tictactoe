@@ -3,29 +3,22 @@ class View
   # The first thing the user sees
   def main_menu
     puts "\e[H\e[2J"
-    puts " ...::||| Main Menu |||::..."
-    puts ""
     puts "        1) New Game"
-    puts "         2) Exit"
-    puts ""
+    puts "        2) Exit"
     print " Please make your selection:"
   end
 
   # Main menu error variant
   def invalid_entry
     puts "\e[H\e[2J"
-    puts " ...::||| Main Menu |||::..."
-    puts ""
     puts "        1) New Game"
-    puts "         2) Exit"
-    puts ""
+    puts "        2) Exit"
     print " Invalid entry, try again! "
   end
 
   # Assigning symbols and taking names
   def player_info(player)
     puts "\e[H\e[2J"
-    puts " ...::||| Player #{player} |||::..."
     puts ""
     if player == 1
       puts "   Your symbol will be X."
@@ -39,8 +32,6 @@ class View
   # This screen runs briefly after the creation of a new game/players
   def instructions
     puts "\e[H\e[2J"
-    puts " ...::||| Instructions |||::..."
-    puts " "
     puts "      Place three of your  "
     puts "   symbols in a line to win."
     puts "            "
@@ -52,9 +43,7 @@ class View
 
   # This is the primary gameplay screen that updates each turn
   def game_state(board, score)
-    puts "\e[H\e[2J"
-    puts " ...::|||  TicTacToe  |||::..."
-    puts " "
+    puts "\e[H\e[2J" 
     puts "        Round #{score[:rounds_played]}, Turn #{score[:turns]}"
     puts "      Board         Score"
     puts ""
